@@ -1,0 +1,91 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+<meta charset="utf-8">  
+    <!-- CSS Files -->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- SPELLS -->    	
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="/youtubeAPI/pageJqueryJsView"></script>    
+    <script src="/youtubeAPI/pageBootstrapMinJsView"></script>    
+    <script src="/youtubeAPI/pageBootstrapJsView"></script>    
+    <script src="/youtubeAPI/commonjsView"></script>    
+    <script src="/youtubeAPI/fileConvertorjsView"></script>    
+</head>    
+<body>
+<div class="top-toolbar">
+<nav>
+<a href="#">+You</a>
+<a href="#">Gmail</a>
+<a href="#">Images </a>
+<a href="#" class="img-grid"></a>
+<a href="#"><button class="signin">Sign In</button></a>
+</nav>
+</div>
+
+<div class="wrap">
+  <ul class="tabs group">
+    <li><a href="/youtubeAPI/indexPageView">Video Converter</a></li>
+    <li><a href="/youtubeAPI/imageConvPageView">Image Converter</a></li>
+    <li><a class="active" href="/youtubeAPI/fileConvertorPageView">Document Converter</a></li>
+  </ul>
+  
+  <div id="content">
+	<div class="search imageConverter">
+		<div class="row">
+		<div class="col-md-12 container">
+			<form name="uploadImage">
+				<div class="col-md-12 nopadding text-left invalidUrl hide" id="ErrorMsg">
+					File type not supported.
+				</div>
+				<div class="col-md-12 nopadding text-left">
+					<div class="col-md-6 nopadding text-left">
+						<label class="formRow">
+							<span> Upload File </span>
+							<input type="file" name="myFIle" id="uploadFile" class="form-controls" accept=".docx,.pdf,.txt" />
+						</label>
+					</div>
+					<div class="col-md-6 nopadding text-left">
+						<label class="formRow">
+							<span> Select Format </span>
+							<select name="fileFormats" id="fileFormats" class="form-control">
+								<option value="pdf">PDF</option> 
+								<option value="docx">Document FIle</option>
+								<option value="txt">Text File</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-12 nopadding text-left">
+					<button type="button" onclick="convertFileFormate();" class="btn btn-default">Converte</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+  </div>
+  
+</div>
+<div class="footer">
+	<footer class="bottom-toolbar">
+		<nav class="footer-left">
+			<a href="#">Advertising</a>
+			<a href="#">Business</a>
+			<a href="#">About</a>
+		</nav>
+		<nav class="footer-right">
+			<a href="#">New Privacy &amp; Terms</a>
+			<a href="#">Settings</a>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>
+<div id="loaderDiv">
+	<div class="overlay"></div>
+	<div class="loader"></div>
+</div>

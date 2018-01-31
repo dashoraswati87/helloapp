@@ -1,0 +1,89 @@
+<!DOCTYPE html>    
+<html>    
+<head>
+<meta charset="utf-8">  
+<base href="/" />    
+    <!-- CSS Files -->    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    
+    <!-- SPELLS -->    	
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="/youtubeAPI/pageJqueryJsView"></script>    
+    <script src="/youtubeAPI/pageBootstrapMinJsView"></script>    
+    <script src="/youtubeAPI/pageBootstrapJsView"></script>    
+    <script src="/youtubeAPI/commonjsView"></script>    
+    <script src="/youtubeAPI/progressPagejsView"></script>    
+</head>    
+<body>
+<div class="top-toolbar">
+<nav>
+<a href="#">+You</a>
+<a href="#">Gmail</a>
+<a href="#">Images </a>
+<a href="#" class="img-grid"></a>
+<a href="#"><button class="signin">Sign In</button></a>
+</nav>
+</div>
+
+<div class="wrap">
+  <ul class="tabs group">
+    <li><a class="active" href="/youtubeAPI/indexPageView" id="video">Video Converter</a></li>
+    <li><a href="/youtubeAPI/imageConvPageView" id="image">Image Converter</a></li>
+    <li><a href="/youtubeAPI/fileConvertorPageView" id="document">Document Converter</a></li>
+  </ul>
+  
+  <div id="content">
+	<div class="search">
+		<div class="col-md-12" id="imageDiv">
+			<div class="col-md-7 nopadding">
+				
+			</div>
+			<div class="col-md-5">
+				<img class="img-responsive" id="thumbnailUrlSmall">
+			</div>
+		</div>
+		
+		<div class="downloader">
+			<div class="html5-progressbar">
+			  <progress id="progressbar" value="0" max="100"></progress> 
+			  <span class="progress_value">0%</span>
+			</div>
+		</div>
+		
+		<div class="convertorText">
+			<p>
+				Clip Converter is a free online media conversion application, which allows you to reocord, convert and download nearly any audio or video URL to common formats. Currently supported services: YouTube (720p, 1080p, 4K). This free and fast converter allows you to watch your favorite YouTube videos offline on your PC, TV or nearly any other device.
+			</p>
+		</div>
+		<div align="left" class="buttonStartConv">
+			<!-- <button type="button" onclick="saveVideo();" id="btnNext" class="btn btn-default hide">Next</button> -->
+			<a download id="xcxcxcxcx" class="hide"><button>Download</button></a>
+
+		</div>
+	</div>
+  </div>
+  
+</div>
+<div class="footer">
+	<footer class="bottom-toolbar">
+		<nav class="footer-left">
+			<a href="#">Advertising</a>
+			<a href="#">Business</a>
+			<a href="#">About</a>
+		</nav>
+		<nav class="footer-right">
+			<a href="#">New Privacy &amp; Terms</a>
+			<a href="#">Settings</a>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>
+<div id="loaderDiv">
+	<div class="overlay"></div>
+	<div class="loader"></div>
+</div>
